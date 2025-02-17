@@ -3,4 +3,6 @@
 3. uruchomienie kontenra: docker container run diamol/ch02-hello-diamol
 4. uruchamianie intrakcyjnego kontenra i nawiązywanie połączenia z terminalem wewnątrz: docker container run --interactive --tty diamol/base
 5.lista działających kontenerów: docker container ls
+6. Wyświetlenie aktywnego kontenera po ID: docker container top b3af69b7cec2
+7. Wyświetlenie logów kontenera: docker container logs b3af69b7cec2
 
