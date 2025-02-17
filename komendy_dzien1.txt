@@ -2,4 +2,5 @@
 2. Czeszczenie kontenerów - pełnego repozytorium: docker container rm -f $(docker container ls -aq)
 3. uruchomienie kontenra: docker container run diamol/ch02-hello-diamol
 4. uruchamianie intrakcyjnego kontenra i nawiązywanie połączenia z terminalem wewnątrz: docker container run --interactive --tty diamol/base
+5.lista działających kontenerów: docker container ls
 
