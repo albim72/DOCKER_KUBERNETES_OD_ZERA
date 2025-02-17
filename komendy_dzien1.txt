@@ -34,3 +34,4 @@
 21. Aplikacja JAVA (Maven)
     ścieżka cd C:\diamol\ch04\exercises\image-of-the-day
      bdowa obrazu: docker image build -t image-of-the-day .
+    uruchomienie kontenera: docker run --name iotd -d -p 800:80 --network nat image-of-the-day
