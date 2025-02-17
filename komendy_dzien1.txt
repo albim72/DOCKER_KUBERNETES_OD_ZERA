@@ -17,3 +17,4 @@
 14. Utworzenie obrazy na podstawie pliku Dockera
   ->  wejście do koatalogu zwaierającego Dockerfile: cd C:\diamol\ch03\exercises\web-ping
   -> utworzenie obrazu: docker image build --tag web-ping .
+  -> wystzskie obrazy zaczynające się na w - docker image ls 'w*'
