@@ -5,4 +5,5 @@
 5.lista działających kontenerów: docker container ls
 6. Wyświetlenie aktywnego kontenera po ID: docker container top b3af69b7cec2
 7. Wyświetlenie logów kontenera: docker container logs b3af69b7cec2
+8. Wyświetlanie wszyskich kontenerów: docker container ls --all
 
