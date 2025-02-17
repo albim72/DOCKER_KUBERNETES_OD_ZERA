@@ -6,4 +6,4 @@
 6. Wyświetlenie aktywnego kontenera po ID: docker container top b3af69b7cec2
 7. Wyświetlenie logów kontenera: docker container logs b3af69b7cec2
 8. Wyświetlanie wszyskich kontenerów: docker container ls --all
-
+9.uruchomienie aplikacji www z kontenera: docker container run --detach --publish 8088:80 diamol/ch02-hello-diamol-web
