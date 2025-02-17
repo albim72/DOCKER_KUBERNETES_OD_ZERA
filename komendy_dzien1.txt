@@ -21,3 +21,5 @@
   -> uruchamianie kontenera na podstawie obrazu dockera :  docker container run -e TARGET=docker.com -e INTERVAL=5000 web-ping
 
 15. Historia obrazu: docker image history web-ping
+16. Obrazy dockera: docker image ls
+17. Poswumowanie zajajętości: docker system df
