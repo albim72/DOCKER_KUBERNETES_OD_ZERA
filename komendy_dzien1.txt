@@ -30,3 +30,7 @@
 
 20. wejście -> cd C:\diamol\ch04\exercises\multi-stage
     -> budowa obrazu: docker image build -t multi-stage .
+
+21. Aplikacja JAVA (Maven)
+    ścieżka cd C:\diamol\ch04\exercises\image-of-the-day
+     bdowa obrazu: docker image build -t image-of-the-day .
