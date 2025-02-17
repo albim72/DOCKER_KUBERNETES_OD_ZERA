@@ -7,3 +7,4 @@
 7. Wyświetlenie logów kontenera: docker container logs b3af69b7cec2
 8. Wyświetlanie wszyskich kontenerów: docker container ls --all
 9.uruchomienie aplikacji www z kontenera: docker container run --detach --publish 8088:80 diamol/ch02-hello-diamol-web
+10. Pobranie obrazu -kontenera: docker image pull diamol/ch03-web-ping
