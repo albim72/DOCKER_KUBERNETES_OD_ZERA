@@ -10,3 +10,6 @@
 10. Pobranie obrazu -kontenera: docker image pull diamol/ch03-web-ping
 11. Urucuhomienie kontenera i nadanie mu nazwy: docker container run -d --name web-ping diamol/ch03-web-ping
 12. Czytanie logów z wykonanej aplikacji: docker container logs web-ping
+13. Wykorzystanie zmiennychś rodowsikoych do ouruchamiania kontenenrów
+  -> usunięcie istenijącej intancji: docker rm -f web-ping
+  -> uruchimienie kontenra z env: docker container run --env TARGET=google.com diamol/ch03-web-ping
