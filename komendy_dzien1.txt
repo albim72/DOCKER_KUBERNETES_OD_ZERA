@@ -36,3 +36,5 @@
      bdowa obrazu: docker image build -t image-of-the-day .
     uruchomienie kontenera: docker run --name iotd -d -p 800:80 --network nat image-of-the-day
     wpisz adres: http://localhost:800/image
+
+22 Tworzenie obrazu aplikacji NODE: \diamol\ch04\exercises\access-log> docker image build -t access-log .
