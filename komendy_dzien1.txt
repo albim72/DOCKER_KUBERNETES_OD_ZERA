@@ -19,3 +19,5 @@
   -> utworzenie obrazu: docker image build --tag web-ping .
   -> wystzskie obrazy zaczynające się na w - docker image ls 'w*'
   -> uruchamianie kontenera na podstawie obrazu dockera :  docker container run -e TARGET=docker.com -e INTERVAL=5000 web-ping
+
+15. Historia obrazu: docker image history web-ping
