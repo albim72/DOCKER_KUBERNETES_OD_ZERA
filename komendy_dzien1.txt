@@ -42,3 +42,8 @@
     adres: http://localhost:801/stats
 
 23. Tworzemnie obrazu aplikacji GO:  docker image build -t image-gallery
+24 DOCKERHUB
+    -> logowanie: docker login --username albim72
+    -> tworzenie obrazu: docker image tag image-gallery albim72/image-gallery:v1
+    -> porównanie rozmiarów: docker image ls --filter reference=image-gallery --filter reference='*/image-gallery'
+    -> ulokowanie obrazu na dockerhub: docker image push albim72/image-gallery:v1
