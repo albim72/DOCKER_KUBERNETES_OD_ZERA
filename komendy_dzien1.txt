@@ -38,3 +38,5 @@
     wpisz adres: http://localhost:800/image
 
 22 Tworzenie obrazu aplikacji NODE: \diamol\ch04\exercises\access-log> docker image build -t access-log .
+    uruchomienie: docker container run --name accesslog -d -p 801:80 --network nat access-log
+    adres: http://localhost:801/stats
