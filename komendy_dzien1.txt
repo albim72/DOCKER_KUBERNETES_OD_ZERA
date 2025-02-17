@@ -13,3 +13,7 @@
 13. Wykorzystanie zmiennychś rodowsikoych do ouruchamiania kontenenrów
   -> usunięcie istenijącej intancji: docker rm -f web-ping
   -> uruchimienie kontenra z env: docker container run --env TARGET=google.com diamol/ch03-web-ping
+
+14. Utworzenie obrazy na podstawie pliku Dockera
+  ->  wejście do koatalogu zwaierającego Dockerfile: cd C:\diamol\ch03\exercises\web-ping
+  -> utworzenie obrazu: docker image build --tag web-ping .
