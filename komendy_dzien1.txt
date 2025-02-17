@@ -24,3 +24,6 @@
 16. Obrazy dockera: docker image ls
 17. Poswumowanie zajajętości: docker system df
 18. Nowa wersja obrazu - na nowym tagu v2 -> docker image build -t web-ping:v2 .
+19 Utworzenie nowej wersji:
+    -> wejście do katalogu: cd C:\diamol\ch03\exercises\web-ping-optimized
+    -> docker image build -t web-ping:v3
