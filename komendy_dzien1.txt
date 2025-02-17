@@ -27,3 +27,6 @@
 19 Utworzenie nowej wersji:
     -> wejście do katalogu: cd C:\diamol\ch03\exercises\web-ping-optimized
     -> docker image build -t web-ping:v3
+
+20. wejście -> cd C:\diamol\ch04\exercises\multi-stage
+    -> budowa obrazu: docker image build -t multi-stage .
