@@ -7,3 +7,8 @@
 }
 
 5. Uruchomienie obrazu z lokalnego rejestru:  docker image push registry.local:5000/gallery/ui:v3
+
+6. Utworzenie zarządania aplikacją wielokontenerową:
+  -> wejście do katalogu z docker-compose file: cd image-of-the-day
+  -> uruchomienie aplikacji: docker-compose up --detach
+
