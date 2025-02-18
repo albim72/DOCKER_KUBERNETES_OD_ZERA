@@ -14,3 +14,8 @@
   -> przeskalowanie usługi iotd: docker-compose up -d --scale iotd=3
   -> odśwież kilka razy stronę: localhost:8010 -> sparwdź logi: docker-compose logs --tail=1 iotd
 
+  STOPOWANIE DOCKER-COMPOSE:
+  -> docker-compose stop
+  -> docker-compose start
+  -> docker compose ls
+
