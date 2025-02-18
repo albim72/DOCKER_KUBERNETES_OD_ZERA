@@ -11,4 +11,6 @@
 6. Utworzenie zarządania aplikacją wielokontenerową:
   -> wejście do katalogu z docker-compose file: cd image-of-the-day
   -> uruchomienie aplikacji: docker-compose up --detach
+  -> przeskalowanie usługi iotd: docker-compose up -d --scale iotd=3
+  -> odśwież kilka razy stronę: localhost:8010 -> sparwdź logi: docker-compose logs --tail=1 iotd
 
