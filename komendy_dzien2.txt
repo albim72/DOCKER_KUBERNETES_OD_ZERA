@@ -19,3 +19,7 @@
   -> docker-compose start
   -> docker compose ls
 
+  DOWN DOCKER-COMPOSE:
+  -> docker-compose down
+  -> docker-compose up -d  
+  -> docker compose ls
