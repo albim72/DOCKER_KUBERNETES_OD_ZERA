@@ -1,0 +1,6 @@
+-> wprowadź kod zródłowy pythonaa do main.py
+-> zainstaluj bibliotekę numpy
+-> napisz Dockerfile
+-> wejdź do katalogu: cd C:\python_docker\sigmoid
+-> utwórz obraz projektu: docker image build --tag python-sigmoid .
+-> uruchom interaktywnie aplikację: docker container run --interactive --tty python-sigmoid
