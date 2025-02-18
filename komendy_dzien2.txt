@@ -1,3 +1,9 @@
 1. Uruchamianie rejestru Dockera w kontenerze:  docker container run -d -p 5000:5000 --restart always diamol/registry
 2. nadanie aplikacji apliasu: Add-Content -Value "127.0.0.1 registry.local" -Path /windows/system32/drivers/etc/hosts
 3. wysłanie ping do aliasu: ping registry.local
+4. Tworzymy w katalogu Docker plik daemon.json i wpiaujemy deklarację: 
+{
+"insecure-registries":["registry.local:5000"]
+}
+
+5. Uruchomienie obrazu z lokalnego rejestru:  docker image push registry.local:5000/gallery/ui:v3
