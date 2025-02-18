@@ -23,3 +23,8 @@
   -> docker-compose down
   -> docker-compose up -d  
   -> docker compose ls
+
+analiza obrazów compose:
+  -> przeskalowanie: docker-compose up -d --scale iotd=3
+  -> wejście do konsoli cmd: docker container exec -it image-of-the-day-image-gallery-1 cmd (cmd należy dodać do zmiennej środowiskowej WINDOWS)
+  -> wyświtleenie danych kontenera za pomocą nslookup: nslookup imaimage-of-the-day-image-gallery-1
