@@ -59,6 +59,12 @@
     docker service create --name timecheck --replicas 1 diamol/ch12-timecheck:1.0
     sprawdzenie repliki: docker service ls
 
+  reakcja Swarm na usunięcie repliki usługi
+    sprawdzenie repliki: docker service ps timecheck
+    uruchomione kontenery: docker container ls
+    usunięcie ostatnirgo kontenera (repliki usługi): docker container rm -f $(docker container ls --last 1 -q)
+    sprawdzenie usług: docker service ps timecheck
+
 
 
 
