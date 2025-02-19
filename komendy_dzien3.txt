@@ -89,6 +89,12 @@ utowrzenie API do rejestrowania komunikaótw
 sprawdzenie usługi:
     docker service ls
 
+uruchomienie sesji terminala sh
+    docker container exec -it $(docker container ls --last 1 -q) sh
+wyszukiwanie nazwy DNS
+    nslookup iotd
+    nslookup accesslog
+
 
 
         
