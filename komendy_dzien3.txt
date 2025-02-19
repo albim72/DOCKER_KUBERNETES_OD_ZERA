@@ -49,6 +49,13 @@
   -> uruchomienie aplikacj w  srodowisku testowym: docker-compose -f ./numbers/docker-compose.yml -f ./numbers/docker-compose-test.yml -p numbers-test up -d
   -> uruchomienie aplikacji w  srodowisku do testów akceptacyjnych: docker-compose -f ./numbers/docker-compose.yml -f ./numbers/docker-compose-uat.yml -p numbers-uat up - d
 
+5. Docker Swarm
+  -> uruchomienie: docker swarm init
+  -> przydzielenie workera: docker swarm join-token worker
+  -> przydzielenie managera: docker swarm join-token manager
+  -> sprawdzenie listy klastrow: docker node ls
+
+
 
 
         
