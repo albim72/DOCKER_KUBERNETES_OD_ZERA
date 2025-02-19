@@ -27,4 +27,7 @@
       docker container run --name todo2 -d -p 8075:80 diamol/ch06-todo-list
       docker container inspect --format '{{.Mounts}}' todo2
       docker volume ls
+
+  -> powiązanie z volumenem kontenera todo2
+      docker container run -d --name t3 --volumes-from todo2 diamol/ch06-todo-list
         
