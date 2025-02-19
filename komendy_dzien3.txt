@@ -69,7 +69,9 @@
     docker service logs --since 10s timecheck
     docker service inspect timecheck -f '{{.Spec.TaskTemplate.ContainerSpec.Image}}'
 
-
+aktualizacja serwisu
+    docker service update --image diamol/ch12-timecheck:2.0 timecheck
+    docker service logs --since 20s timecheck
 
 
 
