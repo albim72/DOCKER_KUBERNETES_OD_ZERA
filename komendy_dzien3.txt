@@ -78,6 +78,17 @@ cofnięcie aktualizacji:
     docker service ps timecheck
     docker service logs --since 25s timecheck
 
+usunięcie poprzedniej aplikacji:
+    docker service rm timecheck
+utworzenie sieci overlay
+    docker network create --driver overlay iotd-net
+utworzenie usług API i podłączenie do sieci
+    docker service create --detach --replicas 3 --network iotd-net --name iotd diamol/ch09-image-of-the-day
+utowrzenie API do rejestrowania komunikaótw 
+    docker service create --detach --replicas 2 --network iotd-net --name accesslog diamol/ch9-access-log
+sprawdzenie usługi:
+    docker service ls
+
 
 
         
