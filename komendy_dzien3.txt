@@ -1,0 +1,6 @@
+1.Projekt Python-Compose
+  przygotuj zgodnie z zawartością katalogu PYTHON_COMPOSE
+  -> wejdż do katalogu projektu
+  -> uruchom: docker-compose up /uruchomi wsztstkie 3 serwisy/
+  -> uruchomienie pojedynczego serwisu: docker-compose up data_struct_service
+  -> zamknięcie compose:  docker-compose down
