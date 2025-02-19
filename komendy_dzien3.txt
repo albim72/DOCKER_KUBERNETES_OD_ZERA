@@ -12,3 +12,14 @@
   -> skopiuj utworzzone pliki - przez każdy z kontenerów na dysk lokalny i porównaj:
       docker container cp rn1:/random/number.txt number1.txt
       docker container cp rn2:/random/number.txt number2.txt
+  -> lokowanie danych w kontenerze:
+      zmiana zawartości kontenera, w loklanym systemie plików kontenera:
+        docker container run --name f1 diamol/ch06-file-display
+        echo "http://elonstoneman.com">url.txt
+        docker container cp url.txt f1:/input.txt
+        docker container start --attach f1
+    uruchominie drugiego kontenera (usunięcie pierwszego) - sprawdzenie dostępu do wartstwy zapisu
+        docker container run --name f2 diamol/ch06-file-display
+        docker container rm -f f1
+        docker container cp f1:/input.txt .
+        
