@@ -94,7 +94,8 @@ uruchomienie sesji terminala sh
 wyszukiwanie nazwy DNS
     nslookup iotd
     nslookup accesslog
-
+utworzenie w klastrze usługi z portami...
+    docker service create --detach --name image-gallery --network iotd-net --publish 8016:80 --replicas 2 diamol/ch09-image-gallery
 
 
         
