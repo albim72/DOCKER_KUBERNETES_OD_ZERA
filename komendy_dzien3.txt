@@ -22,4 +22,9 @@
         docker container run --name f2 diamol/ch06-file-display
         docker container rm -f f1
         docker container cp f1:/input.txt .
+
+  -> towrzenie wolumenu poprzez uruchomienie kontenra z Dockerfile z deklaracją VOLUMEN
+      docker container run --name todo2 -d -p 8075:80 diamol/ch06-todo-list
+      docker container inspect --format '{{.Mounts}}' todo2
+      docker volume ls
         
