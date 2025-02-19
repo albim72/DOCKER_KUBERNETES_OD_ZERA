@@ -38,4 +38,10 @@
   -> uruchom drugi raz app2: docker-compose -f ./todo-list/docker-compose.yml up -d
 
 
+  Dwie instancje aplikacji w kontenerze
+  -> docker-compose -f ./todo-list/docker-compose.yml -p todo-test up -d
+  -> docker compose ls
+  -> docker container port todo-test-todo-web-1 80
+
+
         
