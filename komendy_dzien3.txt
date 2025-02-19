@@ -9,4 +9,6 @@
   -> uruchamiamy dwa kontenery:
       docker container run --name rn1 diamol/ch06-random-number
       docker container run --name rn2 diamol/ch06-random-number
-> 
+  -> skopiuj utworzzone pliki - przez każdy z kontenerów na dysk lokalny i porównaj:
+      docker container cp rn1:/random/number.txt number1.txt
+      docker container cp rn2:/random/number.txt number2.txt
