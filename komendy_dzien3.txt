@@ -73,6 +73,11 @@ aktualizacja serwisu
     docker service update --image diamol/ch12-timecheck:2.0 timecheck
     docker service logs --since 20s timecheck
 
+cofnięcie aktualizacji:
+    docker service update --rollback timecheck
+    docker service ps timecheck
+    docker service logs --since 25s timecheck
+
 
 
         
