@@ -3,7 +3,7 @@ LABEL authors="Marcin Albiniak"
 
 WORKDIR /app
 
-COPY main.py data_processing.py data_struct.py /app/
+COPY main.py data_procession.py data_struct.py /app/
 
 RUN pip install pandas numpy
 
