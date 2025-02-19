@@ -43,5 +43,12 @@
   -> docker compose ls
   -> docker container port todo-test-todo-web-1 80
 
+4. Scalanie wielu wersji aplikacji
+  -> usunięcie istniejących kontenerów: docker-container rm -f $(docker container ls -aq)
+  -> uruchomienie aplikacji w środowisku programistycznym: docker-compose -f ./numbers/docker-compose.yml -f ./numbers/docker-compose-dev.yml -p numbers-dev up -d
+  -> uruchomienie aplikacj w  srodowisku testowym: docker-compose -f ./numbers/docker-compose.yml -f ./numbers/docker-compose-test.yml -p numbers-test up -d
+  -> uruchomienie aplikacji w  srodowisku do testów akceptacyjnych: docker-compose -f ./numbers/docker-compose.yml -f ./numbers/docker-compose-uat.yml -p numbers-uat up - d
+
+
 
         
