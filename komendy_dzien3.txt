@@ -30,4 +30,12 @@
 
   -> powiązanie z volumenem kontenera todo2
       docker container run -d --name t3 --volumes-from todo2 diamol/ch06-todo-list
+
+3. Uruchamianie wielu śrdowisk za pomocą Docker-compose:
+  -> ścieżka: cd C:\diamol\ch10\exercises
+  -> uruchom compose dla app1:  docker-compose -f ./numbers/docker-compose.yml up -d
+  -> uruchom compose dla app2: docker-compose -f ./todo-list/docker-compose.yml up -d
+  -> uruchom drugi raz app2: docker-compose -f ./todo-list/docker-compose.yml up -d
+
+
         
