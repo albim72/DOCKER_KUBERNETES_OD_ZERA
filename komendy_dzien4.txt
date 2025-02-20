@@ -5,3 +5,42 @@ DOCKER SWARM
 4. docker service ls - wyświetlenie serwisów
 5. wdrożenie pliku v2.yml -> docker stack deploy -c ./todo-list/v2.yml todo
 6. wyświetlenie wszystkich replikacji: docker service ps todo_todo-web
+
+APLIAKCJA TENSORFLOW
+
+# Instrukcja użycia Dockera w projekcie TensorFlow
+
+## 1. Budowanie obrazów Dockera
+docker build -t tensorflow_train -f Dockerfile.train .
+docker build -t tensorflow_predict -f Dockerfile.predict .
+
+## 2. Uruchomienie kontenerów
+docker run --rm -v $(pwd):/app tensorflow_train
+docker run --rm -v $(pwd):/app tensorflow_predict
+
+## 3. Uruchomienie aplikacji z Docker Compose
+docker-compose up --build
+
+## 4. Zatrzymanie i usunięcie kontenerów Docker Compose
+docker-compose down
+
+## 5. Inicjalizacja Swarm
+docker swarm init
+
+## 6. Wdrożenie usługi w Swarm
+docker stack deploy -c swarm-deploy.yml tensorflow_stack
+
+## 7. Sprawdzenie uruchomionych usług w Swarm
+docker service ls
+
+## 8. Sprawdzenie uruchomionych kontenerów
+docker ps
+
+## 9. Skalowanie usługi predict do 3 replik w Swarm
+docker service scale tensorflow_stack_predict=3
+
+## 10. Usunięcie stosu Swarm
+docker stack rm tensorflow_stack
+
+## 11. Zatrzymanie Swarm
+docker swarm leave --force
