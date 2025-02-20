@@ -70,4 +70,9 @@ KUBERNETES
 21. wyświetlenie kapsuł: kubectl get pods -o custom-columns=NAME:metadata.name,LABELS:metadata.labels
 22. uruchomienie przekierwoania portów z lokalnej maszyny do wdrożenia: kubectl port-forward deploy/hello-kiamol-2 8080:80
 23 -> uruchom w przeglądarce: localhost:8080
+24. Tworzenie kapsuł kubernetes za pomocą pliku manifeestu:
+  -> wejdź do katalog: cd C:\kiamol\ch02
+  -> zbuduj kapsułę na podstawie manifestu: kubectl apply -f pod.yaml
+  -> wyświetl kapsuły: kubectl get pods
+
 
