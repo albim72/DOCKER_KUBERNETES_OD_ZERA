@@ -66,4 +66,6 @@ KUBERNETES
 17. wyświetlenie listy wszystkich kapsuł: kubectl get pods -o custom-columns=NAME:metadata.name,LABELS:metadata.labels
 18. aktualizacja etykiety app: kubectl label pods -l app=hello-kiamol-2 --overwrite app=hello-kiamol-x
 19.ponowne pobranie kapsuły: kubectl get pods -o custom-columns=NAME:metadata.name,LABELS:metadata.labels
+20. przywrócenie poprzedniej etykiety: kubectl label pods -l app=hello-kiamol-x --overwrite app=hello-kiamol-2
+21. wyświetlenie kapsuł: kubectl get pods -o custom-columns=NAME:metadata.name,LABELS:metadata.labels
 
