@@ -52,3 +52,6 @@ KUBERNETES
 3. oczekiwanie na załadowanie kapsuły: kubectl wait --for condition = Ready pod hello-kiamol
 4. wyświetlenie wszystkich kapsuł w klastrze: kubectl get pods
 5. szczegółowy opis kapsuły: kubectl describe pod hello-kiamol
+6. niestandardowe kolumny danych wyjściowych: kubectl get pod hello-kiamol --output custom-columns=NAME:metadata.name,NODE_IP:status.hostIP,POD_IP:status.podIP
+7. wyjście za pomocą jsonpath: kubectl get pod hello-kiamol -o jsonpath = '{.status.containerStatuses[0].containerID}'
+8. alternatywnie custom-columns: kubectl get pod hello-kiamol -o custom-columns=CID:status.containerStatuses[0].containerID
