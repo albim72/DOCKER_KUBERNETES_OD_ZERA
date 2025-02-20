@@ -1,0 +1,34 @@
+version: "3.8"
+services:
+  train:
+    image: tensorflow_train:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.train
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          memory: 4G
+        reservations:
+          memory: 2G
+    volumes:
+      - /tensorflow-data:/app
+      -
+  predict:
+    image: tensorflow_predict:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.predict
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          memory: 4G
+        reservations:
+          memory: 2G
+    volumes:
+      - /tensorflow-data:/app
+    depends_on:
+      - train
+    
