@@ -63,3 +63,7 @@ KUBERNETES
 14. wy świetlenie kapsuł: kubectl get pods
 15. etykiety nadane przez wdrożenie: kubectl get deploy hello-kiamol-2 -o jsonpath='{.spec.template.metadata.labels}'
 16. wyświetenie listy kapsuł spełniających etykietę: kubectl get pods -l app=hello-kiamol-2
+17. wyświetlenie listy wszystkich kapsuł: kubectl get pods -o custom-columns=NAME:metadata.name,LABELS:metadata.labels
+18. aktualizacja etykiety app: kubectl label pods -l app=hello-kiamol-2 --overwrite app=hello-kiamol-x
+19.ponowne pobranie kapsuły: kubectl get pods -o custom-columns=NAME:metadata.name,LABELS:metadata.labels
+
