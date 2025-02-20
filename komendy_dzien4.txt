@@ -1,1 +1,7 @@
-
+DOCKER SWARM
+1. ścieżka: cd C:\diamol\ch13\exercises
+2. wdrożenie pliku v1.yml -> docker stack deploy -c ./todo-list/v1.yml todo
+3. docker stack ls - wy świetlenie stosów
+4. docker service ls - wyświetlenie serwisów
+5. wdrożenie pliku v2.yml -> docker stack deploy -c ./todo-list/v2.yml todo
+6. wyświetlenie wszystkich replikacji: docker service ps todo_todo-web
