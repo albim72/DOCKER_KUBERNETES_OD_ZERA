@@ -59,3 +59,7 @@ KUBERNETES
 10. usunięcie kontnera: docker container rm -f $(docker container ls -q --filter label=io.kubernetes.container.name=hello-kiamol)
 11. wyświetlenie kapsuł: kubectl get pod hello-kiamol
 12. nasłuchiwanie na porcie 8080 i wysłanie ruchu do kapsuły na porcie 80: kubectl port-forward pod/hello-kiamol 8080:80
+13. utworzenie nowego wdrożenia: kubectl create deployment hello-kiamol-2 --image kiamol/ch02-hello-kiamol
+14. wy świetlenie kapsuł: kubectl get pods
+15. etykiety nadane przez wdrożenie: kubectl get deploy hello-kiamol-2 -o jsonpath='{.spec.template.metadata.labels}'
+16. wyświetenie listy kapsuł spełniających etykietę: kubectl get pods -l app=hello-kiamol-2
