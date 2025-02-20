@@ -74,5 +74,6 @@ KUBERNETES
   -> wejdź do katalog: cd C:\kiamol\ch02
   -> zbuduj kapsułę na podstawie manifestu: kubectl apply -f pod.yaml
   -> wyświetl kapsuły: kubectl get pods
+  -> tworzenie kapsułu z manifestu osadzonego na url: kubectl apply -f https://raw.githubusercontent.com/sixeyed/kiamol/master/ch02/pod.yaml
 
 
