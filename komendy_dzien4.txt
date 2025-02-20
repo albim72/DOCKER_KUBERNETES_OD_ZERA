@@ -44,3 +44,11 @@ docker stack rm tensorflow_stack
 
 ## 11. Zatrzymanie Swarm
 docker swarm leave --force
+
+KUBERNETES
+
+1. marzędzia klastra Kubernetes: kubectl get nodes
+2. uruchomienie kapsuły (pod): kubectl run hello-kiamol --image kiamol/ch02-hello-kiamol --restart=Never
+3. oczekiwanie na załadowanie kapsuły: kubectl wait --for condition = Ready pod hello-kiamol
+4. wyświetlenie wszystkich kapsuł w klastrze: kubectl get pods
+5. szczegółowy opis kapsuły: kubectl describe pod hello-kiamol
