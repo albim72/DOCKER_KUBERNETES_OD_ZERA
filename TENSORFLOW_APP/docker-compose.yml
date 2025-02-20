@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  train:
+    build:
+      context: .
+      dockerfile: Dockerfile.train
+    volumes:
+      - .:/app
+    command: python train.py
+
+  predict:
+    build:
+      context: .
+      dockerfile: Dockerfile.predict
+    volumes:
+      - .:/app
+    command: python predict.py
