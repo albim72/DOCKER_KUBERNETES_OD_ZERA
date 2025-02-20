@@ -55,3 +55,7 @@ KUBERNETES
 6. niestandardowe kolumny danych wyjściowych: kubectl get pod hello-kiamol --output custom-columns=NAME:metadata.name,NODE_IP:status.hostIP,POD_IP:status.podIP
 7. wyjście za pomocą jsonpath: kubectl get pod hello-kiamol -o jsonpath = '{.status.containerStatuses[0].containerID}'
 8. alternatywnie custom-columns: kubectl get pod hello-kiamol -o custom-columns=CID:status.containerStatuses[0].containerID
+9. wyszukanie kontenera kapsuły: docker container ls -q --filter label=io.kubernetes.container.name=hello-kiamol
+10. usunięcie kontnera: docker container rm -f $(docker container ls -q --filter label=io.kubernetes.container.name=hello-kiamol)
+11. wyświetlenie kapsuł: kubectl get pod hello-kiamol
+12. nasłuchiwanie na porcie 8080 i wysłanie ruchu do kapsuły na porcie 80: kubectl port-forward pod/hello-kiamol 8080:80
