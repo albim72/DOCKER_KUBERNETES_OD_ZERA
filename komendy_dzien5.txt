@@ -35,3 +35,8 @@
         -> wdrożenie usuługi: kubectl apply -f sleep/sleep2-service.yaml
         -> wypisanie informacji na temat usługi: kubectl apply -f sleep/sleep2-service.yaml
         -> sprawdzenie komunikacji: kubectl apply -f sleep/sleep2-service.yaml -> niepowodzenie, gdyż polecenie używa protoołu ICMP niedostępnengo dla Kubernetes
+
+15. deployment aplikacji www oraz api:
+        -> tworzenie wdrożeń: kubectl apply -f numbers/api.yaml -f numbers/web.yaml
+        -> przekierowanie portu do aplikacji www: kubectl port-forward deploy/numbers-web 8080:80
+        -> sprawdzenie: localhost:8080
