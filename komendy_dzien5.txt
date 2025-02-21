@@ -19,3 +19,9 @@
         -> usunięcie wdrożeń: kubectl delete deploy --all
         -> sprawdzenie: kubectl get pods
         -> sprawdzenie wszystkiego w klastrze: kubectl get all
+
+12. wdrożenie dwóch kapsuł i szukanie adresów IP
+        -> C:\> cd C:\kiamol\ch03
+        -> utóworzenie dwóch wdrożeń: kubectl apply -f sleep/sleep1.yaml -f sleep/sleep2.yaml
+        -> sprawdzenie aderesu IP kapsuły 2: kubectl get pod -l app=sleep-2 -o custom-columns=NAME:metadata.name,POD_IP:status.podIP
+        -> pingowanie pomiędzy kapsułami: kubectl exec deploy/sleep-1 -- ping -c 4 $(kubectl get pod -l app=sleep-2 -o custom-columns=POD_IP:status.podIP)
