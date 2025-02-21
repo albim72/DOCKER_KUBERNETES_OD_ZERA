@@ -1,2 +1,9 @@
 1. uruchomienie aplikacji przy użyciu manifestu wdrożenia: kubectl apply -f deployment.yaml
 2. wyszukanie kapsuł zarządzanych przez nowe wdrożenie: kubectl get pods -l app=hello-kiamol-4
+3. sprawdzenie wewnętrznego IP kapsuły: kubectl get pod hello-kiamol -o custom-columns=NAME:metadata.name,POD_IP:status.podIP
+4. uruchomienie interaktywnej powłoki polceń w kapsule: kubectl exec -it hello-kiamol -- sh
+5. Operacje w powłoce:
+    -> hostname -i
+    -> wget -O - http://localhost | head -n 4
+
+
