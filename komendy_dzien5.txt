@@ -70,4 +70,12 @@
         -> wyświetlenie zawartości env: kubectl exec deploy/sleep -- sh -c 'printenv | grep "^KIAMOL"'
 
 
+        uruchomienie aplikacji www z utawieniami:
+        -> kubectl apply -f todo-list/todo-web.yaml > utworzenie serwisu
+        -> wyświetlenie: kubectl get svc todo-web
+        -> sprawdzenie -> localhost:8080 i localhost:8080/config
+        -> sprawdzenie logów: kubectl logs -l app=todo-web
+
+
+
 
