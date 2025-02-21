@@ -40,3 +40,10 @@
         -> tworzenie wdrożeń: kubectl apply -f numbers/api.yaml -f numbers/web.yaml
         -> przekierowanie portu do aplikacji www: kubectl port-forward deploy/numbers-web 8080:80
         -> sprawdzenie: localhost:8080
+
+16. wdrożenie usługi naprawiającej problem:
+        -> instalacja serwisu:  kubectl apply -f numbers/api-service.yaml
+        -> wyświetlenie serwisu: kubectl get svc numbers-api
+        -> przekierowanie portu do aplikacji www: kubectl port-forward deploy/numbers-web 8080:80
+
+
