@@ -56,5 +56,12 @@
         -> redeklaracja wdrożenia: kubectl apply -f sleep/sleep-with-env.yaml
         -> wyświetlenie zmiennych środowiskowych: kubectl exec deploy/sleep -- printenv HOSTAME KIAMOL_CHAPTER -> wyjświetlenie zmiennej KIAMOL_CHAPTER
 
+18. Mapa wdrożenia:
+        -> utwórz mapę wdrożenia: kubectl create configmap sleep-config-literal --from-literal=kiamol.section='4.1'
+        -> wyświetl mapę wdrożenia: kubectl get cm sleep-config-literal
+        -> wyświetl szczegóły: kubectl describe cm sleep-config-literal
+        -> rekonfiguruj wdrożenie: kubectl apply -f sleep/sleep-with-configMap-env.yaml
+        -> wyświetl zmienne śrdowiskowe: kubectl exec deploy/sleep -- sh -c 'printenv | grep "^KIAMOL"'
+
 
 
