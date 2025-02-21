@@ -1,0 +1,2 @@
+1. uruchomienie aplikacji przy użyciu manifestu wdrożenia: kubectl apply -f deployment.yaml
+2. wyszukanie kapsuł zarządzanych przez nowe wdrożenie: kubectl get pods -l app=hello-kiamol-4
