@@ -10,3 +10,7 @@
 7. wyświetlenie dzienników za pomocą docker: docker container logs --tail=2 $(docker container ls -q --filter label=io.kubernetes.container.name=hello-kiamol)
 8. wywołanie aplikacji www wewnątrz kontenera kapsuły: kubectl exec deploy/hello-kiamol-4 -- sh -c 'wget -O - http://localhost > /dev/null'
 9. sprawdzenie dzienników: kubectl logs --tail=1 -l app=hello-kiamol-4
+10. Usuwanie zasobów (podów):
+        -> kubectl get pods
+        -> usuń wszysktie pody: kubectl delete pods --all
+        -> kubectl get pods -> cztery(wszystkie pody zostały usunięte, ale dwa pody zarządzane kontrolerami otrzymały zamienniki)
