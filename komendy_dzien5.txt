@@ -49,5 +49,10 @@
         -> usunięcie kapsuły: kubectl delete pod -l app=numbers-api
         -> ponownie sprawdzenie api oraz przekierowanie do portu aplikacji www
 
+17. Zmienne środowiskowe a wdrożenia:
+        -> cd C:\kiamol\ch04 
+        -> utworzenie wdrożenia: kubectl apply -f sleep/sleep.yaml  
+        -> wyświetlenie zmiennych środowiskowych: kubectl exec deploy/sleep -- printenv HOSTAME KIAMOL_CHAPTER -> wyjście z błędem bo brak minimum jednej zmiennej
+
 
 
