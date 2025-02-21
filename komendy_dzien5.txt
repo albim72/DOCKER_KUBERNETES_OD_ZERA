@@ -14,3 +14,8 @@
         -> kubectl get pods
         -> usuń wszysktie pody: kubectl delete pods --all
         -> kubectl get pods -> cztery(wszystkie pody zostały usunięte, ale dwa pody zarządzane kontrolerami otrzymały zamienniki)
+11. Wpływ usuwania wdrożeń na zawarte w nich kapsuły:
+        -> kubectl get deploy
+        -> usunięcie wdrożeń: kubectl delete deploy --all
+        -> sprawdzenie: kubectl get pods
+        -> sprawdzenie wszystkiego w klastrze: kubectl get all
