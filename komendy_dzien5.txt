@@ -53,6 +53,8 @@
         -> cd C:\kiamol\ch04 
         -> utworzenie wdrożenia: kubectl apply -f sleep/sleep.yaml  
         -> wyświetlenie zmiennych środowiskowych: kubectl exec deploy/sleep -- printenv HOSTAME KIAMOL_CHAPTER -> wyjście z błędem bo brak minimum jednej zmiennej
+        -> redeklaracja wdrożenia: kubectl apply -f sleep/sleep-with-env.yaml
+        -> wyświetlenie zmiennych środowiskowych: kubectl exec deploy/sleep -- printenv HOSTAME KIAMOL_CHAPTER -> wyjświetlenie zmiennej KIAMOL_CHAPTER
 
 
 
