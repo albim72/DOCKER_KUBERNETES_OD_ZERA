@@ -80,5 +80,14 @@
         -> utowrzenie zasobu na podstawie xaml: kubectl apply -f todo-list/configMaps/todo-web-config-dev.yaml
         -> aktualizacja aplikacji: kubectl apply -f todo-list/todo-web-dev.yaml
 
+        -> wyświetlenie konfiguracji: kubectl exec deploy/todo-web -- sh -c 'ls -l /app/app*.json'
+        -> kubectl exec deploy/todo-web -- sh -c 'ls -l /app/config/*.json'
+
+        -> sprawdzenie bieżących dzienników: kubectl logs -l app=todo-web\
+        -> aktualizacja configMap: kubectl apply -f todo-list/configMaps/todo-web-config-dev-with-logging.yaml
+        -> zatrzymanie konsoli na 120s: sleep 120
+        -> sprawdzenie nowych ustawień: kubectl exec deploy/todo-web -- sh -c 'ls -l /app/config/*.json'
+        -> sprawdzenie dzienników
+
 
 
