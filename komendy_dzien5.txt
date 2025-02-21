@@ -63,5 +63,11 @@
         -> rekonfiguruj wdrożenie: kubectl apply -f sleep/sleep-with-configMap-env.yaml
         -> wyświetl zmienne śrdowiskowe: kubectl exec deploy/sleep -- sh -c 'printenv | grep "^KIAMOL"'
 
+        modyfikacja mapy konfiguracji:
+        -> utworzenie nowego obiektu configmap: kubectl create configmap sleep-config-env-file --from-env-file=sleep/ch04.env
+        -> wyświetlenie: kubectl get cm sleep-config-env-file
+        -> aktualizacja specyfikacji kapsuły:  kubectl apply -f sleep/sleep-with-configMap-env-file.yaml
+        -> wyświetlenie zawartości env: kubectl exec deploy/sleep -- sh -c 'printenv | grep "^KIAMOL"'
+
 
 
