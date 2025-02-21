@@ -25,3 +25,9 @@
         -> utóworzenie dwóch wdrożeń: kubectl apply -f sleep/sleep1.yaml -f sleep/sleep2.yaml
         -> sprawdzenie aderesu IP kapsuły 2: kubectl get pod -l app=sleep-2 -o custom-columns=NAME:metadata.name,POD_IP:status.podIP
         -> pingowanie pomiędzy kapsułami: kubectl exec deploy/sleep-1 -- ping -c 4 $(kubectl get pod -l app=sleep-2 -o custom-columns=POD_IP:status.podIP)
+
+13. Zmiana adresu IP poda:
+        ->  kubectl get pod -l app=sleep-2 -o custom-columns=NAME:metadata.name,POD_IP:status.podIP
+        -> usunięcie poda: kubectl delete pods -l app=sleep-2
+        -> sprwadź ponownie adres IP poda (będzie inny)
+
