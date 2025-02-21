@@ -76,6 +76,9 @@
         -> sprawdzenie -> localhost:8080 i localhost:8080/config
         -> sprawdzenie logów: kubectl logs -l app=todo-web
 
+        opis configMap przez xaml:
+        -> utowrzenie zasobu na podstawie xaml: kubectl apply -f todo-list/configMaps/todo-web-config-dev.yaml
+        -> aktualizacja aplikacji: kubectl apply -f todo-list/todo-web-dev.yaml
 
 
 
