@@ -45,5 +45,9 @@
         -> instalacja serwisu:  kubectl apply -f numbers/api-service.yaml
         -> wyświetlenie serwisu: kubectl get svc numbers-api
         -> przekierowanie portu do aplikacji www: kubectl port-forward deploy/numbers-web 8080:80
+        -> sprawdzenie api: kubectl get pod -l app=numbers-api -o custom-columns=NAME:metadata.name,POD_IP:status.podIP
+        -> usunięcie kapsuły: kubectl delete pod -l app=numbers-api
+        -> ponownie sprawdzenie api oraz przekierowanie do portu aplikacji www
+
 
 
