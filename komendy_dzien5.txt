@@ -6,4 +6,5 @@
     -> hostname -i
     -> wget -O - http://localhost | head -n 4
 
-
+6. wyświetlenie dzienników za pomocą kubernetes: kubectl logs --tail=2 hello-kiamol
+7. wyświetlenie dzienników za pomocą docker: docker container logs --tail=2 $(docker container ls -q --filter label=io.kubernetes.container.name=hello-kiamol)
